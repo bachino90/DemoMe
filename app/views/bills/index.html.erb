@@ -1,0 +1,23 @@
+<h1>Listing Bills</h1>
+ 
+<% if @bills.any? %>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Total</th>
+    <th>Pagado</th>
+    <th></th>
+  </tr>
+ 
+  <% @bills.each do |bill| %>
+    <tr>
+      <td><%= bill.id %></td>
+      <td><%= bill.total %></td>
+      <td><%= bill.is_pagado %></td>
+      <td><%= link_to 'Show', bill %></td>
+    </tr>
+  <% end %>
+</table>
+<% end %>
+
+<%= link_to 'New bill', new_bill_path %>
