@@ -45,4 +45,9 @@ def payBill
   end
 end
 
+def payedBills
+  @bills = Bill.where(pagado: true)
+  render json: @bills, :include => :items
+end
+
 end

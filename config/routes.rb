@@ -10,6 +10,7 @@ DemoMe::Application.routes.draw do
   
   get '/api/bills/:id', to: 'bills#getJSON'
   get 'api/bills/pay/:id', to: 'bills#payBill'
+  get 'api/bills/', to: 'bills#payedBills'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
